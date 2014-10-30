@@ -13,7 +13,7 @@ html {
 
 body {
   padding-top: 60px;
-  background-image: url("<%= asset_path 'bg.bmp' %>") 
+  background-image: url(<%= asset_path 'bg.bmp' %>); 
 }
 
 section {
@@ -83,9 +83,9 @@ footer {
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
   a {
-    color: $gray;
+    color: #fff;
     &:hover {
-      color: $gray-darker;
+      color: $gray-medium-light;
     }
   }
   small {
