@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  site_id: 
+  site_type: MyString
+  name: MyString
+  coords: MyString
+
+two:
+  site_id: 
+  site_type: MyString
+  name: MyString
+  coords: MyString

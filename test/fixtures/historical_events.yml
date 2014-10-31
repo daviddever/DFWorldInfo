@@ -1,0 +1,77 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  historical_event_id: 
+  year: 
+  seconds72: 
+  historical_event_type: MyString
+  hfid: 
+  state: MyString
+  site_id: 
+  subregion_id: 
+  feature_layer_id: 
+  coords: MyString
+  artifact_id: 
+  unit_id: 
+  agreement_id: 
+  subtype: MyString
+  group_1_hfid: 
+  group_2_hfid: 
+  civ_id: 
+  target_hfid: 
+  snatcher_hfid: 
+  attacker_civ_id: 
+  defender_civ_id: 
+  attacker_general_hfid: 
+  defender_general_hfid: 
+  woundee_hfid: 
+  wounder_hfid: 
+  slayer_hfid: 
+  slayer_race: MyString
+  slayer_item_id: 
+  slayer_shooter_item_id: 
+  cause: MyString
+  changee_hfid: 
+  changer_hfid: 
+  old_race: MyString
+  old_caste: MyString
+  new_race: MyString
+  new_caste: MyString
+
+two:
+  historical_event_id: 
+  year: 
+  seconds72: 
+  historical_event_type: MyString
+  hfid: 
+  state: MyString
+  site_id: 
+  subregion_id: 
+  feature_layer_id: 
+  coords: MyString
+  artifact_id: 
+  unit_id: 
+  agreement_id: 
+  subtype: MyString
+  group_1_hfid: 
+  group_2_hfid: 
+  civ_id: 
+  target_hfid: 
+  snatcher_hfid: 
+  attacker_civ_id: 
+  defender_civ_id: 
+  attacker_general_hfid: 
+  defender_general_hfid: 
+  woundee_hfid: 
+  wounder_hfid: 
+  slayer_hfid: 
+  slayer_race: MyString
+  slayer_item_id: 
+  slayer_shooter_item_id: 
+  cause: MyString
+  changee_hfid: 
+  changer_hfid: 
+  old_race: MyString
+  old_caste: MyString
+  new_race: MyString
+  new_caste: MyString

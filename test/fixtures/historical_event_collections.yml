@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  historical_event_id: 
+  start_year: 
+  start_seconds72: 
+  end_year: 
+  end_seconds72: 
+  event: MyString
+  historical_event_type: MyString
+  parent_eventcol: 
+  subregion_id: 
+  feature_layer_id: 
+  site_id: 
+  coords: MyString
+  defnding_enid: 
+  ordinal: 
+  name: MyString
+  agressor_ent_id: 
+  defender_ent_id: 
+  war_eventcol: 
+  attacking_hfids: MyString
+  defending_hfids: MyString
+  attacking_squad_race: MyString
+  attacking_squad_entity_pop: 
+  attacking_squad_number: 
+  attackig_squads: MyString
+  defending_squads: MyString
+  outcome: MyString
+
+two:
+  historical_event_id: 
+  start_year: 
+  start_seconds72: 
+  end_year: 
+  end_seconds72: 
+  event: MyString
+  historical_event_type: MyString
+  parent_eventcol: 
+  subregion_id: 
+  feature_layer_id: 
+  site_id: 
+  coords: MyString
+  defnding_enid: 
+  ordinal: 
+  name: MyString
+  agressor_ent_id: 
+  defender_ent_id: 
+  war_eventcol: 
+  attacking_hfids: MyString
+  defending_hfids: MyString
+  attacking_squad_race: MyString
+  attacking_squad_entity_pop: 
+  attacking_squad_number: 
+  attackig_squads: MyString
+  defending_squads: MyString
+  outcome: MyString

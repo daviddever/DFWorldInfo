@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  figure_id: 
+  name: MyString
+  race: MyString
+  caste: MyString
+  appeared: 
+  birth_year: 
+  birth_seconds: 
+  death_year: 
+  death_seconds72: 
+  asscociated_type: MyString
+  sphere: MyText
+  hf_link: MyText
+  entity_link: MyText
+  entity_position_link: MyString
+  site_link: 
+  hf_skill: MyText
+  ent_pop_link: 
+
+two:
+  figure_id: 
+  name: MyString
+  race: MyString
+  caste: MyString
+  appeared: 
+  birth_year: 
+  birth_seconds: 
+  death_year: 
+  death_seconds72: 
+  asscociated_type: MyString
+  sphere: MyText
+  hf_link: MyText
+  entity_link: MyText
+  entity_position_link: MyString
+  site_link: 
+  hf_skill: MyText
+  ent_pop_link: 
