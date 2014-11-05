@@ -1,31 +1,36 @@
 class CreateHistoricalEventCollections < ActiveRecord::Migration
   def change
     create_table :historical_event_collections do |t|
-      t.int :historical_event_id
-      t.int :start_year
-      t.int :start_seconds72
-      t.int :end_year
-      t.int :end_seconds72
+      t.integer :historical_event_id
+      t.integer :start_year
+      t.integer :start_seconds72
+      t.integer :end_year
+      t.integer :end_seconds72
       t.string :event
       t.string :historical_event_type
-      t.int :parent_eventcol
-      t.int :subregion_id
-      t.int :feature_layer_id
-      t.int :site_id
+      t.integer :parent_eventcol
+      t.integer :subregion_id
+      t.integer :feature_layer_id
+      t.integer :site_id
       t.string :coords
-      t.int :defnding_enid
-      t.int :ordinal
+      t.integer :defending_enid
+      t.integer :ordinal
       t.string :name
-      t.int :agressor_ent_id
-      t.int :defender_ent_id
-      t.int :war_eventcol
+      t.integer :aggressor_ent_id
+      t.integer :defender_ent_id
+      t.integer :war_eventcol
       t.string :attacking_hfids
       t.string :defending_hfids
       t.string :attacking_squad_race
-      t.int :attacking_squad_entity_pop
-      t.int :attacking_squad_number
-      t.string :attackig_squads
-      t.string :defending_squads
+      t.integer :attacking_squad_entity_pop
+      t.integer :attacking_squad_number
+      t.integer :attacking_squad_deaths
+      t.integer :attacking_squad_site
+      t.string :defending_squad_race
+      t.integer :defending_squad_entity_pop
+      t.integer :defending_squad_number
+      t.integer :defending_squad_deaths
+      t.integer :defending_squad_site
       t.string :outcome
 
       t.timestamps null: false
