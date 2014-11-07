@@ -1,16 +1,16 @@
 race_total = {}
 
-File.open("/home/david/df/app/dfdata/region2-00005-01-01-world_sites_and_pops.txt").readline do |line|
+File.open("/home/david/df/app/dfdata/region2-00005-01-01-world_sites_and_pops.txt").readlines.each do |line|
 
   section = "Totals" if line == "Civilized World Population"
 
-  next if /\s/.match(line)
-
-  if section = "Totals" do
-    if line.match(/\s\b(.+?)\b/) do
+  if section == "Totals"
+    if line.match(/\s\b(.+?)\b/)
       race_total = { line.match(/[A-Z](.+?)\b/) => line.match(/\d/) }
-    else
-      total_pop = line.match(/\d/) if line.match(/\s\bTotal:\s(\d+?)\b/)
+    elsif
+      if line.match(/\s\bTotal:\s(\d+?)\b/)
+        total_pop = line.match(/\d/)
+      end
     end
   end
 end
