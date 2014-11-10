@@ -1,11 +1,12 @@
 race_total = {}
 total_pop = ""
 section = ""
+site_name = Array.new
 
 
 File.open("/home/david/df/app/dfdata/region2-00005-01-01-world_sites_and_pops.txt").readlines.each do |line|
 
-  line = line.encode('UTF-8')
+  line = line.encode('UTF-8', invalid: :replace)
 
   if !section.nil?
     section = "Totals" if line.chomp == "Civilized World Population"
@@ -23,12 +24,20 @@ File.open("/home/david/df/app/dfdata/region2-00005-01-01-world_sites_and_pops.tx
       end
     end
   end
+
+  if section == "Sites"
+    if /(\d+?):\s(.+?),\s"(.+?)",\s(.+?)\z/.match(line)
+      site_name.push(/:\s\b(.+?),/.match(line))
+      site_number = /(\d+?):/.match(line)
+    end
+#    if /Owner:\s(.+?),\s(.+?)\z/.match(line)
+#      site_owner
+  end
 end
 
 race_total.each { |key, value| puts "#{value} #{key}" }
-puts total_pop
+puts "Total Population: #{total_pop}"
 
-#  if line.match(\(.+?):\s(.+?),\s"(.+?)",\s(.+?)\b\)
 
 
 
