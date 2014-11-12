@@ -27,7 +27,7 @@ end
 underground_regions.each do |item|
   t = UndergroundRegion.new
   t.underground_region_id = item["id"]
-  t.underground_region_type = item["region_type"]
+  t.underground_region_type = item["type"]
   t.depth = item["depth"]
   t.save
 end
@@ -36,6 +36,7 @@ end
 sites.each do |item|
   t = Site.new
   t.site_id = item["id"]
+  t.site_type = item["type"]
   t.name = item["name"]
   t.coords = item["coords"]
   t.save
@@ -43,6 +44,7 @@ end
 
 artifacts.each do |item|
   t = Artifact.new
+  t.artifact_id = item["id"]
   t.name = item["name"]
   t.item = item["item"]
   t.save
