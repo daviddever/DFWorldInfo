@@ -1,0 +1,31 @@
+<div class="center jumbotron">
+  <h1>
+    <%= @historical_figure.name.titleize %>
+  </h1>
+</div>
+<div class="center jumbotron">
+  <h2>
+    <p>Race: <%= @historical_figure.race.titleize %></p>
+    <p>Caste: <%= @historical_figure.caste.titleize %></p>
+    <p>Appeared: <%= @historical_figure.appeared %></p>
+    <p>Birth Year: <%= @historical_figure.birth_year %></p>
+    <% if @historical_figure.birth_seconds72 != -1%>
+      <p>Birth Seconds: <%= @historical_figure.birth_seconds72 %></p>
+    <% end %>
+    <% if @historical_figure.death_year != -1%>
+      <p>Death Year: <%= @historical_figure.death_year %>
+    <% end %>
+    <% if @historical_figure.birth_seconds72 != -1%>
+       <p>Death Seconds: <%= @historical_figure.death_seconds72 %>
+    <% end %>
+    <% if @historical_figure.associated_type.present?%>
+      <p>Associated Type: <%= @historical_figure.associated_type.titleize %>
+    <% end %>
+    <% if @historical_figure.sphere.present?%>
+      <p>Sphere: <%= @historical_figure.sphere %>
+    <% end %>
+     <% if @historical_figure.hf_link.present?%>
+       <p>Historical Figure Links: <%= @historical_figure.hf_link %>
+     <% end %>
+  </h2>
+</div>

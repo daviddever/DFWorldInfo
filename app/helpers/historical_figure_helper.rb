@@ -1,0 +1,2 @@
+module HistoricalFigureHelper
+end
