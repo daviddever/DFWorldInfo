@@ -1,3 +1,3 @@
 class HistoricalFigure < ActiveRecord::Base
-  has many :spheres, through: :historifcal_figure_spheres
+  has_many :spheres, through: :historical_figure_spheres
 end

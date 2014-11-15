@@ -11,7 +11,6 @@ class CreateHistoricalFigures < ActiveRecord::Migration
       t.integer :death_year
       t.integer :death_seconds72
       t.string :associated_type
-      t.text :sphere
       t.text :hf_link
       t.text :entity_link
       t.string :entity_position_link
