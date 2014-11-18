@@ -8,6 +8,6 @@ class CreateHistoricalFigureSpheres < ActiveRecord::Migration
     end
     add_index :historical_figure_spheres, :historical_figure_id
     add_index :historical_figure_spheres, :sphere_id
-    add_index :historical_figure_spheres, [:historical_figure_id, :sphere_id], unique: true
+    add_index :historical_figure_spheres, [:historical_figure_id, :sphere_id], unique: true, name: 'index_hf_spheres_on_historical_figure_id_and_sphere_id'
   end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141031232205) do
+ActiveRecord::Schema.define(version: 20141115000209) do
 
   create_table "artifacts", force: true do |t|
     t.integer  "artifact_id"
@@ -118,6 +118,17 @@ ActiveRecord::Schema.define(version: 20141031232205) do
     t.datetime "updated_at",             null: false
   end
 
+  create_table "historical_figure_spheres", force: true do |t|
+    t.integer  "historical_figure_id"
+    t.integer  "sphere_id"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "historical_figure_spheres", ["historical_figure_id", "sphere_id"], name: "index_hf_spheres_on_historical_figure_id_and_sphere_id", unique: true
+  add_index "historical_figure_spheres", ["historical_figure_id"], name: "index_historical_figure_spheres_on_historical_figure_id"
+  add_index "historical_figure_spheres", ["sphere_id"], name: "index_historical_figure_spheres_on_sphere_id"
+
   create_table "historical_figures", force: true do |t|
     t.integer  "figure_id"
     t.string   "name"
@@ -129,7 +140,6 @@ ActiveRecord::Schema.define(version: 20141031232205) do
     t.integer  "death_year"
     t.integer  "death_seconds72"
     t.string   "associated_type"
-    t.text     "sphere"
     t.text     "hf_link"
     t.text     "entity_link"
     t.string   "entity_position_link"
@@ -153,6 +163,12 @@ ActiveRecord::Schema.define(version: 20141031232205) do
     t.string   "site_type"
     t.string   "name"
     t.string   "coords"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "spheres", force: true do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
