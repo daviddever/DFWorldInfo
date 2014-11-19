@@ -2,6 +2,8 @@ require 'saxerator'
 
 parser = Saxerator.parser(File.new("/home/david/df/app/dfdata/region2-00005-01-01-legends.xml"))
 
+unique_spheres = Array.new
+
 # Load information from the main sections in xml into arrays
 regions = parser.within('regions').map { |item| item }
 underground_regions = parser.within("underground_regions").map { |item| item}
@@ -62,14 +64,26 @@ historical_figures.each do |item|
   t.death_year = item["death_year"]
   t.death_seconds72 = item["death_seconds72"]
   t.associated_type = item["associated_type"]
-  t.sphere = item["sphere"]
   t.hf_link = item["hf_link"]
   t.entity_link = item["entity_link"]
   t.entity_position_link = item["entity_position_link"]
   t.site_link = item["site_link"]
   t.hf_skill = item["hf_skill"]
   t.ent_pop_link = item["ent_pop_link"]
+  (item['sphere'].presence || []).each do |sphere|
+    if sphere.present?
+      t.spheres << Sphere.where(name: sphere).first_or_create
+    end
+  end
   t.save
+end
+
+historical_figures.each do |hf|
+  (hf['sphere'].presence || []).each do |sphere|
+    if sphere.present?
+      hf.sphere << Sphere.where(name: sphere).first_or_create
+    end
+  end
 end
 
 
