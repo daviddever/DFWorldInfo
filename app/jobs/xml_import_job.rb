@@ -70,22 +70,11 @@ historical_figures.each do |item|
   t.site_link = item["site_link"]
   t.hf_skill = item["hf_skill"]
   t.ent_pop_link = item["ent_pop_link"]
-  (item['sphere'].presence || []).each do |sphere|
-    if sphere.present?
+  Array(item["sphere"]).each do |sphere|
       t.spheres << Sphere.where(name: sphere).first_or_create
-    end
   end
   t.save
 end
-
-historical_figures.each do |hf|
-  (hf['sphere'].presence || []).each do |sphere|
-    if sphere.present?
-      hf.sphere << Sphere.where(name: sphere).first_or_create
-    end
-  end
-end
-
 
 entity_populations.each do |item|
   t = EntityPopulation.new
