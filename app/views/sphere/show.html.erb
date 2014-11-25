@@ -1,2 +1,10 @@
-<h1>Sphere#show</h1>
-<p>Find me in app/views/sphere/show.html.erb</p>
+<div class="center jumbotron">
+  <h1>
+    <%= @sphere.name.titleize %>
+  </h1>
+</div>
+<div class="center jumbotron">
+  <h2>
+    <%= render partial: "historical_figure", collection: @sphere.historical_figures %>
+  </h2>
+</div>

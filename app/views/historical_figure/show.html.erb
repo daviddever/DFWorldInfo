@@ -22,9 +22,7 @@
       <p>Associated Type: <%= @historical_figure.associated_type.titleize %>
     <% end %>
     <% if @historical_figure.spheres.present? %>
-      <p>Spheres: <% @historical_figure.spheres.each do |sphere| %>
-        <a href=/sphere/<%= sphere.name %>"><%= sphere.name.titleize %></a>
-      <% end %><p>
+      <p>Sphere: <%= render partial: "sphere", collection: @historical_figure.spheres %></p>
     <% end %>
   </h2>
 </div>
