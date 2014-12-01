@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141115000209) do
+ActiveRecord::Schema.define(version: 20141201184652) do
 
   create_table "artifacts", force: true do |t|
     t.integer  "artifact_id"
@@ -118,6 +118,18 @@ ActiveRecord::Schema.define(version: 20141115000209) do
     t.datetime "updated_at",             null: false
   end
 
+  create_table "historical_figure_links", force: true do |t|
+    t.integer  "historical_figure_id"
+    t.integer  "link_id"
+    t.string   "link_type"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "historical_figure_links", ["historical_figure_id", "link_id"], name: "index_historical_figure_links_on_hf_id_and_link_id", unique: true
+  add_index "historical_figure_links", ["historical_figure_id"], name: "index_historical_figure_links_on_historical_figure_id"
+  add_index "historical_figure_links", ["link_id"], name: "index_historical_figure_links_on_link_id"
+
   create_table "historical_figure_spheres", force: true do |t|
     t.integer  "historical_figure_id"
     t.integer  "sphere_id"
@@ -140,7 +152,6 @@ ActiveRecord::Schema.define(version: 20141115000209) do
     t.integer  "death_year"
     t.integer  "death_seconds72"
     t.string   "associated_type"
-    t.text     "hf_link"
     t.text     "entity_link"
     t.string   "entity_position_link"
     t.integer  "site_link"

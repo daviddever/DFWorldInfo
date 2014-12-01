@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  historical_figure_id: 1
+  link_id: 1
+  link_type: MyString
+
+two:
+  historical_figure_id: 1
+  link_id: 1
+  link_type: MyString
