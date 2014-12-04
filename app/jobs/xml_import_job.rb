@@ -72,8 +72,8 @@ historical_figures.each do |item|
   item["sphere"].to_a.each do |sphere|
     t.spheres << Sphere.where(name: sphere).first_or_create
   end
-  Array(item["hf_link"]).each do |hf_link|
-    puts hf_link
+  array = item["hf_link"].is_a?(Saxerator::Builder::HashElement) ? [item["hf_link"]] : Array(item["hf_link"])
+  array.each do |hf_link|
     t.historical_figure_links.build(link_id: hf_link["hfid"], link_type: hf_link["link_type"], link_strength: hf_link["link_strength"])
   end
   t.save
