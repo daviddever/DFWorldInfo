@@ -4,6 +4,7 @@ class CreateHistoricalFigureLinks < ActiveRecord::Migration
       t.integer :historical_figure_id
       t.integer :link_id
       t.string :link_type
+      t.integer :link_strength
 
       t.timestamps null: false
     end

@@ -64,14 +64,17 @@ historical_figures.each do |item|
   t.death_year = item["death_year"]
   t.death_seconds72 = item["death_seconds72"]
   t.associated_type = item["associated_type"]
-  t.hf_link = item["hf_link"]
   t.entity_link = item["entity_link"]
   t.entity_position_link = item["entity_position_link"]
   t.site_link = item["site_link"]
   t.hf_skill = item["hf_skill"]
   t.ent_pop_link = item["ent_pop_link"]
-  Array(item["sphere"]).each do |sphere|
-      t.spheres << Sphere.where(name: sphere).first_or_create
+  item["sphere"].to_a.each do |sphere|
+    t.spheres << Sphere.where(name: sphere).first_or_create
+  end
+  Array(item["hf_link"]).each do |hf_link|
+    puts hf_link
+    t.historical_figure_links.build(link_id: hf_link["hfid"], link_type: hf_link["link_type"], link_strength: hf_link["link_strength"])
   end
   t.save
 end
@@ -172,4 +175,3 @@ historical_eras.each do |item|
   t.start_year = ["start_year"]
   t.save
 end
-

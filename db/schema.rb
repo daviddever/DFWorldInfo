@@ -122,6 +122,7 @@ ActiveRecord::Schema.define(version: 20141201184652) do
     t.integer  "historical_figure_id"
     t.integer  "link_id"
     t.string   "link_type"
+    t.integer  "link_strength"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
