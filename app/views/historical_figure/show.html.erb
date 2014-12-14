@@ -19,10 +19,11 @@
        <p>Death Seconds: <%= @historical_figure.death_seconds72 %>
     <% end %>
     <% if @historical_figure.associated_type.present? %>
-      <p>Associated Type: <%= @historical_figure.associated_type.titleize %>
+      <p>Associated Type: <%= @historical_figure.associated_type.titleize %></p>
     <% end %>
     <% if @historical_figure.spheres.present? %>
       <p>Sphere: <%= render partial: "sphere", collection: @historical_figure.spheres %></p>
     <% end %>
+    <%= render partial: "historical_figure_link", collection: @historical_figure.links %>
   </h2>
 </div>
