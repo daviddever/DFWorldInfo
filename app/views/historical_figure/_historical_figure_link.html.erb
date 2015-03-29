@@ -1,3 +1,3 @@
-<p><a href="/historical_figure/<%= historical_figure.links.link_id %>"><%= historical_figure.name.titleize %></a></p>
-<p>Relationship: <%= historical_figure.links.link_type %> </p>
-<p>Link Strength: <%= historical_figure.links.link_strength %></p>
+<p><a href="/historical_figure/<%= historical_figure_link.link_id %>"><%= historical_figure_link.link.name.titleize %></a></p>
+<p>Relationship: <%= historical_figure_link.link_type.titleize %> </p>
+<p>Link Strength: <%= historical_figure_link.link_strength %></p>
